@@ -12,7 +12,7 @@ RSpec.describe Franc, type: :model do
     end
   end
 
-  describe "#equals" do
+  describe '#equals' do
     it 'return true if value is equal' do
       expect(subject.equals(Franc.new(5))).to eq true
     end
