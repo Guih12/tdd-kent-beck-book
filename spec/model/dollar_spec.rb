@@ -2,13 +2,14 @@ require_relative '../../model/dollar'
 
 RSpec.describe Dollar, type: :model do
   subject { described_class.new(5) }
+  let(:five) { Money.dollar(5) }
   describe '#times' do
     it 'should return 10' do
-      expect(Dollar.new(10).amount).to eq subject.times(2).amount
+      expect(Dollar.new(10).amount).to eq five.times(2).amount
     end
 
     it 'should return 15' do
-      expect(Dollar.new(15).amount).to eq subject.times(3).amount
+      expect(Dollar.new(15).amount).to eq five.times(3).amount
     end
   end
 
