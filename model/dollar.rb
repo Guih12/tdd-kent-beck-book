@@ -6,7 +6,7 @@ class Dollar < Money
   end
 
   def self.dollar(amount)
-    Dollar.new(amount, "USD")
+    Money.new(amount, "USD")
   end
 
   attr_reader :currency
