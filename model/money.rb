@@ -1,8 +1,9 @@
 class Money
-  attr_reader :amount
+  attr_reader :amount, :currency
 
-  def initialize(amount)
+  def initialize(amount, currency = nil)
     @amount = amount
+    @currency = currency
   end
 
   def equals(object)
@@ -10,9 +11,15 @@ class Money
     amount == money.amount
   end
 
-  def self.dollar(amount)
-    Dollar.new(amount)
+  def self.dollar(amount, currency)
+    Dollar.new(amount, currency)
   end
 
-  def currency; end
+  def self.franc(amount, currency)
+    Franc.new(amount, currency)
+  end
+
+  def currency
+    @currency
+  end
 end

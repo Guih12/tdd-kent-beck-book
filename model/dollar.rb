@@ -1,13 +1,13 @@
 require_relative './money'
 
 class Dollar < Money
-  CURRENCY = 'USD'.freeze
+  def initialize(amount, currency = nil)
+    super
+  end
 
   def times(multiplier)
     Dollar.new(amount * multiplier)
   end
 
-  def currency
-    CURRENCY
-  end
+  attr_reader :currency
 end
