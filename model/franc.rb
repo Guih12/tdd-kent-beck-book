@@ -7,7 +7,7 @@ class Franc < Money
     super
   end
 
-  def times(multiplier)
-    Franc.new(@amount * multiplier)
+  def self.franc(amount)
+    Money.new(amount, "CHF")
   end
 end

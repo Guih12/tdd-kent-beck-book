@@ -5,8 +5,8 @@ class Dollar < Money
     super
   end
 
-  def times(multiplier)
-    Dollar.new(amount * multiplier)
+  def self.dollar(amount)
+    Dollar.new(amount, "USD")
   end
 
   attr_reader :currency

@@ -1,7 +1,7 @@
 require_relative '../../model/franc'
 
 RSpec.describe Franc, type: :model do
-  let(:five) { Money.franc(5, "CHF") }
+  let(:five) { described_class.franc(5) }
 
   describe '#times' do
     it 'should return 10' do
@@ -21,6 +21,7 @@ RSpec.describe Franc, type: :model do
     it 'return false if value is not equal' do
       expect(five.equals(Franc.new(6))).to eq false
     end
+
   end
 
   describe "#currency" do
