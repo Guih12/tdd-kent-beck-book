@@ -21,4 +21,10 @@ RSpec.describe Franc, type: :model do
       expect(subject.equals(Franc.new(6))).to eq false
     end
   end
+
+  describe "#currency" do
+    it 'return CHF' do
+      expect(subject.currency).to eq "CHF"
+    end
+  end
 end

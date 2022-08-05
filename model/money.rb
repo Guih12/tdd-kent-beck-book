@@ -13,4 +13,6 @@ class Money
   def self.dollar(amount)
     Dollar.new(amount)
   end
+
+  def currency; end
 end
